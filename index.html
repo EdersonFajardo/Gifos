@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto Gifos</title>
-  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="assets/styles/style.css"/>
 </head>
 
 <body>
@@ -30,40 +30,62 @@
   <main>
     <!--Seccion dinamica-->
     <!--Home Page-->
-    <section>
+    <section class="seccionInicial">  
       <h1>
-        Inspirate, busca, guarda y crea los mejores GIFOS
+        Inspirate, busca, guarda y crea los mejores <span>GIFOS</span>
       </h1>
-      <img src="./assets/icons/ilustra_header.svg" alt="">
-      <br>
-      <div>
-        <input type="search" name="buscar">
+      <div class="imagenPrincipal">
+        <img  src="./assets/icons/ilustra_header.svg" alt="">
       </div>
-      <div>
-        <img src="./assets/icons/icon-search.svg" alt="">
+      
+      <!-- Search Container -->
+      <div class="searchContainer">
+        <div class="campoBusqueda">
+          <input type="search" name="buscar" class="inputBusqueda" placeholder="Busca GIFOS y más">
+          <img src="./assets/icons/icon-search.svg" alt="">
+        </div>
       </div>
-      <div>
-        <p>Trending:</p>
-        <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+      <div class="trending_inicial">
+        <p>Trending: <br>
+          Reactions, Entertainment, Sports, Stickers, Artists
+        </p>
       </div>
     </section>
-    <!--Busqueda-->
+
+    <!--mascotas-->
     <section>
       <hr color="blue" size=3 width="20%">
       <h2>Mascotas</h2>
       <div>aqui va una galeria de fotos:)</div>
       <button>Ver mas</button>
     </section>
+
+    <!-- favoritos -->
     <section class="favoritos">
       <img src="./assets/icons/icon-favoritos.svg" alt="Icocno de favoritos">
-      <h1>Favoritos</h1>
-      <div class="carrete_favoritos">Acava una grilla</div>
+      <h2>Favoritos</h2>
+      <div id="carrete_favoritos" class="carrete_favoritos">
+        
+          <!-- <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt=""> -->      
+       
+      </div>
+
       <button type="submit" class="botonVerMas">Ver mas</button>
+      
     </section>
+
+    <!-- mis gif -->
     <section class="misGifos">
       <img src="./assets/icons/icon-mis-gifos.svg" alt="Icocno de mis gifos">
-      <h1>Mis GIFOS</h1>
-      <div class="carrete_favoritos">Acava una grilla</div>
+      <h2>Mis GIFOS</h2>
+      <div class="carrete_gifos">Acava una grilla</div>
       <button type="submit" class="botonVerMas">Ver mas</button>
     </section>
 
@@ -76,6 +98,8 @@
       <div class="carrete_trending">Muchos gifs</div>
     </section>
   </main>
+
+  <!-- footer -->
   <footer>
     <p>Compartir en:</p>
     <nav class="redes">
@@ -101,4 +125,19 @@
   </footer>
 </body>
 
+<script>
+  let carreteFavoritos = document.getElementById("carrete_favoritos")
+
+  let count = 8
+  let images = ""
+  
+  for (let i = 0; i < count; i++) 
+  {
+    images += `<img src="https://via.placeholder.com/100" alt="">`
+    console.log(i)
+  }
+  
+ // console.log(images)
+  carreteFavoritos.innerHTML = images
+</script>
 </html>

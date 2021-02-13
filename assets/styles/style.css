@@ -4,8 +4,64 @@
 /*mis gifos*/
 /*home page*/
 /*favoritos*/
+.favoritos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .favoritos h2 {
+    color: #572ee5; }
+
+.carrete_favoritos {
+  display: flex;
+  flex-wrap: wrap; }
+  .carrete_favoritos img {
+    padding: 10%; }
+
 /*estlos generales*/
+.botonVerMas {
+  color: #572ee5;
+  background: none;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  width: 127px;
+  height: 50px; }
+
 /*header*/
 /*busqueda*/
+.seccionInicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .seccionInicial h1 {
+    text-align: center;
+    width: 40%;
+    color: #572ee5; }
+    .seccionInicial h1 span {
+      color: #50e3c2; }
+  .seccionInicial .imagenPrincipal {
+    display: flex;
+    justify-content: center; }
+    .seccionInicial .imagenPrincipal img {
+      width: 80%; }
+
+.searchContainer {
+  border: 1px solid #572ee5;
+  border-radius: 27px;
+  height: 50px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 0% 2% 0% 5%; }
+
+.inputBusqueda {
+  height: 40px;
+  border: none;
+  outline: none;
+  width: 75vw; }
+
+.trending_inicial {
+  text-align: center;
+  color: #572ee5;
+  width: 40%; }
 
 /*# sourceMappingURL=style.css.map */
