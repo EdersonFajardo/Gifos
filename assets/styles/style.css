@@ -1,5 +1,6 @@
 /*archivos principales*/
 /*variables*/
+/*Modo nocturno*/
 /*trending*/
 /*mis gifos*/
 .misGifos {
@@ -31,6 +32,29 @@
   padding: 10%;
 }
 
+/*nocturno
+
+.misGifos
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        h2{
+            color: $base-night;
+        }
+}
+
+.carrete_gifos{
+    display: flex;
+    flex-wrap: wrap;
+
+    img{
+        padding: 10%;
+    }
+}
+
+*/
 /*home page*/
 /*favoritos*/
 .favoritos {
@@ -62,6 +86,31 @@
   padding: 10%;
 }
 
+/*nocturno
+
+.favoritos
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        h2{      
+            color: $base-night;
+        }
+}
+
+
+.carrete_favoritos
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+    img{
+        padding: 10%;
+    }
+}
+
+*/
 /*estlos generales*/
 .botonVerMas {
   color: #572ee5;
@@ -136,4 +185,6 @@
   color: #572ee5;
   width: 40%;
 }
+
+/*busqueda real:(*/
 /*# sourceMappingURL=style.css.map */

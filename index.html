@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto Gifos</title>
-  <link rel="stylesheet" href="assets/styles/style.css"/>
+  <link rel="stylesheet" href="assets/styles/style.css" />
 </head>
 
 <body>
@@ -30,14 +30,14 @@
   <main>
     <!--Seccion dinamica-->
     <!--Home Page-->
-    <section class="seccionInicial">  
+    <section class="seccionInicial">
       <h1>
         Inspirate, busca, guarda y crea los mejores <span>GIFOS</span>
       </h1>
       <div class="imagenPrincipal">
-        <img  src="./assets/icons/ilustra_header.svg" alt="">
+        <img src="./assets/icons/ilustra_header.svg" alt="">
       </div>
-      
+
       <!-- Search Container -->
       <div class="searchContainer">
         <div class="campoBusqueda">
@@ -52,38 +52,11 @@
       </div>
     </section>
 
-    <!--mascotas-->
+    <!--Busqueda (mascotas)-->
     <section>
       <hr color="blue" size=3 width="20%">
       <h2>Mascotas</h2>
-      <div>aqui va una galeria de fotos:)</div>
-      <button>Ver mas</button>
-    </section>
-    <!--Favoritos-->
-    <section class="favoritos" id="#link-favoritos">
-      <img src="./assets/icons/icon-favoritos.svg" alt="Icocno de favoritos">
-      <h2>Favoritos</h2>
-      <div id="carrete_favoritos" class="carrete_favoritos">
-        
-          <!-- <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt="">
-          <img src="https://via.placeholder.com/100" alt=""> -->      
-       
-      </div>
-
-      <button type="submit" class="botonVerMas">Ver mas</button>
-      
-    </section>
-    <!--Mis Gifos-->
-    <section class="misGifos" id="#link-misGifos">
-      <img src="./assets/icons/icon-mis-gifos.svg" alt="Icocno de mis gifos">
-      <h2>Mis GIFOS</h2>
-      <div class="carrete_gifos">
+      <div class="carrette_busqueda">
 
         <img src="https://via.placeholder.com/100" alt="">
           <img src="https://via.placeholder.com/100" alt="">
@@ -95,9 +68,47 @@
           <img src="https://via.placeholder.com/100" alt="">
 
       </div>
+      <button>Ver mas</button>
+    </section>
+    <!--Favoritos-->
+    <section class="favoritos" id="#link-favoritos">
+      <img src="./assets/icons/icon-favoritos.svg" alt="Icocno de favoritos">
+      <h2>Favoritos</h2>
+      <div id="carrete_favoritos" class="carrete_favoritos">
+
+        <!-- <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt="">
+          <img src="https://via.placeholder.com/100" alt=""> -->
+
+      </div>
 
       <button type="submit" class="botonVerMas">Ver mas</button>
-      
+
+    </section>
+    <!--Mis Gifos-->
+    <section class="misGifos" id="#link-misGifos">
+      <img src="./assets/icons/icon-mis-gifos.svg" alt="Icocno de mis gifos">
+      <h2>Mis GIFOS</h2>
+      <div class="carrete_gifos">
+
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+        <img src="https://via.placeholder.com/100" alt="">
+
+      </div>
+
+      <button type="submit" class="botonVerMas">Ver mas</button>
+
     </section>
 
     <!--Seccion estatica-->
@@ -117,18 +128,15 @@
       <ul class="redesLogos">
         <li>
           <a href="https://www.facebook.com/" target="_blank">
-            <img src="./assets/icons/icon_facebook.svg" alt="logo_facebook"
-              class="facebook" /></a>
+            <img src="./assets/icons/icon_facebook.svg" alt="logo_facebook" class="facebook" /></a>
         </li>
         <li>
           <a href="https://www.twitter.com/" target="_blank">
-            <img src="./assets/icons/icon-twitter.svg" alt="logo_twitter"
-              class="twitter" /></a>
+            <img src="./assets/icons/icon-twitter.svg" alt="logo_twitter" class="twitter" /></a>
         </li>
         <li>
           <a href="https://www.instagram.com/" target="_blank">
-            <img src="./assets/icons/icon_instagram.svg" alt="logo_instagram"
-              class="instagram" /></a>
+            <img src="./assets/icons/icon_instagram.svg" alt="logo_instagram" class="instagram" /></a>
         </li>
       </ul>
       <p>© GIFOS 2020 All Rights Reserved.</p>
@@ -141,14 +149,14 @@
 
   let count = 8
   let images = ""
-  
-  for (let i = 0; i < count; i++) 
-  {
+
+  for (let i = 0; i < count; i++) {
     images += `<img src="https://via.placeholder.com/100" alt="">`
     console.log(i)
   }
-  
- // console.log(images)
+
+  // console.log(images)
   carreteFavoritos.innerHTML = images
 </script>
+
 </html>
