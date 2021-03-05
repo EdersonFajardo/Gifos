@@ -1,0 +1,30 @@
+/*Home Page*/
+
+/*footer*/
+body .pieDePagina {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 47px;
+  font-size: 15px;
+}
+body .pieDePagina .redes .redesLogos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+body .pieDePagina p {
+    color: black;
+}
+body .pieDePagina .redes .redesLogos li {
+  margin: 15px;
+}
+.margen{
+    margin-top: 23px;
+    background-color: #572EE5;
+    width: 100%;
+    height: 5px;
+}

@@ -1,0 +1,18 @@
+.Trending_GIFOS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #F3F5F8;
+    h2{
+        color: #572EE5;
+        margin-top: 46px;
+    }
+    p{
+        color: black;
+    }
+    .carrete_trending{
+        margin-bottom: 80px;
+    }
+}
