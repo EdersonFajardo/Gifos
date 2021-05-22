@@ -4,13 +4,34 @@
     flex-direction: column;
     align-items: center;
 
-        h2{      
-            color: $base-color;
+    img{
+        margin-top: 2%;
+    }
+
+    h2{
+        color: $base-color;
+        font-family: $primary-font;
+    }
+
+    .favorites_nothing{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+
+        img{
+            margin-top: 36%;
+            margin-bottom: 10%;
         }
+        
+        p{
+            font-family: $primary-font;
+            color: $secundary-color;
+        }
+    }
 }
 
 
-.carrete_favoritos
+/* .carrete_favoritos
 {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +39,7 @@
     img{
         padding: 10%;
     }
-}
+} */
 
 /*nocturno
 

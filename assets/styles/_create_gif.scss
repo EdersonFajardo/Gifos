@@ -1,0 +1,36 @@
+.media_container {
+    display: flex;
+
+    .camera{
+        display: flex;
+        
+        .camera_light{
+            margin-top: 2%;
+        }
+    }
+
+    .gif_container {
+        border: 1px solid $base-color;
+        width: 688px;
+        height: 390px;
+        text-align: center;
+        margin: auto;
+
+        h2 {
+            color: $base-color;
+        }
+    }
+
+    .movie{
+         align-self: flex-end;   
+    }
+}
+
+.btn_gif {
+    color: $base-color;
+    background: none;
+    border: 1px solid $base-color;
+    border-radius: 25px;
+    width: 127px;
+    height: 50px;
+}

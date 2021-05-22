@@ -1,0 +1,19 @@
+.search{
+    text-align: center;
+
+    h2{
+        color: $base-color;
+        font-family: $primary-font;
+    }
+
+    .search_nothing{
+        img{
+            margin-top: 14%;
+            margin-bottom: 4%;
+        }
+        p{
+            color: $secundary-color;
+            font-family: $primary-font;
+        }
+    }
+}
