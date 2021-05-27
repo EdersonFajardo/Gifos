@@ -475,40 +475,107 @@ body .pieDePagina .redes .redesLogos li {
 }
 
 /* Seccion crear gif */
-.media_container {
+.gif_create {
+  width: 80%;
+  margin: auto;
+}
+
+.gif_create .media_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.media_container .camera {
+.gif_create .media_container .camera {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.media_container .camera .camera_light {
+.gif_create .media_container .camera .camera_light {
   margin-top: 2%;
 }
 
-.media_container .gif_container {
+.gif_create .media_container .gif_container {
   border: 1px solid #572ee5;
   width: 688px;
   height: 390px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gif_create .media_container .gif_container h2 {
+  color: #572ee5;
+  font-family: "Montserrat";
+}
+
+.gif_create .media_container .gif_container h2 .word {
+  color: #50e3c2;
+}
+
+.gif_create .media_container .gif_container p {
+  color: black;
+  font-family: "Roboto";
+}
+
+.gif_create .media_container .gif_container #myRecord {
+  height: 340px;
   margin: auto;
 }
 
-.media_container .gif_container h2 {
+.gif_create .steps_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gif_create .steps_container .steps {
+  margin-top: 3%;
+}
+
+.gif_create .steps_container .steps .step {
   color: #572ee5;
+  background: none;
+  border: 1px solid #572ee5;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
 }
 
-.media_container .movie {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.gif_create .line_btn {
+  text-align: center;
 }
 
-.btn_gif {
+.gif_create .line_btn .line_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2% 0%;
+}
+
+.gif_create .line_btn .line_container hr {
+  height: 7px;
+  width: 795px;
+  border: 1px solid #572ee5;
+  background-color: #572ee5;
+  border-radius: 50px;
+}
+
+.gif_create .line_btn .btn_gif {
   color: #572ee5;
   background: none;
   border: 1px solid #572ee5;

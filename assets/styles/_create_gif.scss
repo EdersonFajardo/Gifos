@@ -1,36 +1,91 @@
-.media_container {
-    display: flex;
+.gif_create {
+    width: 80%;
+    margin: auto;
 
-    .camera{
+    .media_container {
         display: flex;
-        
-        .camera_light{
-            margin-top: 2%;
+
+        .camera {
+            display: flex;
+
+            .camera_light {
+                margin-top: 2%;
+            }
+        }
+
+        .gif_container {
+            border: 1px solid $base-color;
+            width: 688px;
+            height: 390px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                color: $base-color;
+                font-family: $primary-font;
+                .word{
+                    color: $secundary-color;
+                }
+            }
+
+            p {
+                color: $black-color;
+                font-family: $secondary-font;
+            }
+
+            #myRecord{
+                height: 340px;
+                margin:auto;
+            }
         }
     }
 
-    .gif_container {
-        border: 1px solid $base-color;
-        width: 688px;
-        height: 390px;
+    .steps_container {
+        display: flex;
+        justify-content: center;
+
+        .steps {
+            margin-top: 3%;
+
+            .step {
+                color: $base-color;
+                background: none;
+                border: 1px solid $base-color;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+
+    }
+
+    .line_btn {
         text-align: center;
-        margin: auto;
 
-        h2 {
+        .line_container{
+            display: flex;
+            justify-content: center;
+            margin: 2% 0%;
+
+            hr {
+                height: 7px;
+                width: 795px;
+                border: 1px solid $base-color;
+                background-color: $base-color;
+                border-radius: 50px;
+            }
+        }
+
+        .btn_gif {
             color: $base-color;
+            background: none;
+            border: 1px solid $base-color;
+            border-radius: 25px;
+            width: 127px;
+            height: 50px;
         }
     }
-
-    .movie{
-         align-self: flex-end;   
-    }
-}
-
-.btn_gif {
-    color: $base-color;
-    background: none;
-    border: 1px solid $base-color;
-    border-radius: 25px;
-    width: 127px;
-    height: 50px;
 }

@@ -5,34 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@100&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <section class="media_container">
-        <div class="camera">
-            <img src="./assets/icons/camara.svg" alt="camera">
-            <img class="camera_light" src="./assets/icons/element-luz-camara.svg" alt="light camera">
-        </div>
-        <div class="gif_container">
-            <div class="gif_txt">
-                <h2>Aquí podrás <br> crear tus propios <span> GIFOS</span></h2>
-                <p>¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)</p>
+    <section class="gif_create">
+        <section class="media_container">
+            <div class="camera">
+                <img src="./assets/icons/camara.svg" alt="camera">
+                <img class="camera_light" src="./assets/icons/element-luz-camara.svg" alt="light camera">
             </div>
+            <div class="gif_container">
+                <div class="angles_up">
+                    <div class="angle_1"></div>
+                    <div class="angle_2"></div>
+                </div>
+                <div class="gif_txt">
+                    <h2>Aquí podrás <br> crear tus propios <span class="word"> GIFOS</span></h2>
+                    <p>¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)</p>
+                </div>
+                <div class="angles_down">
+                    <div class="angle_3"></div>
+                    <div class="angle_4"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps_container">
+            <div class="steps">
+                <button class="step">1</button>
+                <button class="step">2</button>
+                <button class="step">3</button>
+            </div>
+
+            <img src="/assets/icons/pelicula.svg" alt="movie">
+
+        </section>
+
+        <div class="line_btn">
+            <div class="line_container">
+                <hr>
+            </div>
+            <button class="btn_gif" status="init">COMENZAR</button>
         </div>
-        <img class="movie" src="assets/icons/pelicula.svg" alt="">
     </section>
-
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-
-    <button class="btn_gif" status="init">COMENZAR</button>
-    <script src="/assets/js/media.js">
-    </script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="/assets/js/media.js"></script>
 </body>
 
 </html>
