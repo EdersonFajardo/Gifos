@@ -26,7 +26,6 @@ function getMediaRecord() {
         });
 
         recorder.startRecording();
-
     });
 }
 
@@ -40,6 +39,7 @@ function stopRecord() {
             let urlCreator = window.URL || window.webkitURL;
             let videoUrl = urlCreator.createObjectURL(blob);
             document.getElementById("myRecord").src = videoUrl;
+            document.getElementById("myRecord").play()
             console.log ("video = " + videoUrl)
         });
         
@@ -54,6 +54,7 @@ const changeStatus = (status = "") => {
     let options = ["init", "record", "stop", "upload"]
     if (status != "") 
     {   
+        let stepContent = "0" 
         let txtBtn = ""
         let gifContent = ""
 
@@ -64,12 +65,16 @@ const changeStatus = (status = "") => {
             gifContent = `<h2>¿Nos das acceso a tu cámara?</h2>
                         <p>El acceso a tu camara será válido sólo <br>
                         por el tiempo en el que estés creando el GIFO.</p>`
+
+            stepContent = "1"
         }
         else if(status.toLowerCase() == "record") {
             txtBtn = "FINALIZAR"    
             status = options[2]    
             
             gifContent = `<video src="" id="myRecord"></video>`
+
+            stepContent = "2"
             
             getMediaRecord();
             
@@ -88,6 +93,20 @@ const changeStatus = (status = "") => {
 
         if (gifContent != "")
             gifTxt.innerHTML = gifContent
+
+
+        let steps = document.getElementsByClassName("step");
+        for (var i = 0; i<steps.length; i++) {
+            steps[i].classList.remove("step_active");
+            //prueba[i].classList.add("step_active")
+        }
+
+        if (stepContent != "0"){
+            document.querySelector(`.step[numStep='${stepContent}']`).classList.add("step_active");
+            //console.log(document.querySelector(`.step[numStep='${stepContent}']`))
+        }  
+
+        
     }
 }
 
