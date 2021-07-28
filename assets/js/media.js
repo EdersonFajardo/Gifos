@@ -39,8 +39,11 @@ function stopRecord() {
             let urlCreator = window.URL || window.webkitURL;
             let videoUrl = urlCreator.createObjectURL(blob);
             document.getElementById("myRecord").src = videoUrl;
-            document.getElementById("myRecord").play()
             console.log ("video = " + videoUrl)
+            
+            let img = `<img src="${videoUrl}">`
+            
+            gifTxt.innerHTML = img
         });
         
     }   

@@ -41,10 +41,11 @@
       <!-- Search Container -->
       <div class="searchContainer">
         <div class="campoBusqueda">
-          <input type="search" name="buscar" class="inputBusqueda" placeholder="Busca GIFOS y más">
-          <img src="./assets/icons/icon-search.svg" alt="">
+          <input type="search" name="buscar" class="inputBusqueda" placeholder="Busca GIFOS y más" id="search">
+          <button id="btnSearch"><img src="./assets/icons/icon-search.svg" alt=""></button>
         </div>
       </div>
+      <div id="results"></div>
       <div class="trending_inicial">
         <H2>Trending: </H2><br>
         <p>Reactions, Entertainment, Sports, Stickers, Artists
@@ -92,7 +93,7 @@
   </footer>
 </body>
 
-<script>
+<!-- <script>
   let carreteFavoritos = document.getElementById("carrete_favoritos")
 
   let count = 8
@@ -105,6 +106,7 @@
 
   // console.log(images)
   carreteFavoritos.innerHTML = images
-</script>
+</script> -->
+<script src="./assets/js/searcher.js"></script>
 
 </html>
