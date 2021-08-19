@@ -120,5 +120,5 @@ gifCreate.onclick = () => {
     changeStatus(statusBtn)
 }
 
-
-
+//POST
+var 

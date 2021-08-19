@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto Gifos</title>
-  <link rel="stylesheet" href="assets/styles/style.css" />
+  <link rel="stylesheet" href="/ui/dist/styles/style.min.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -40,12 +41,13 @@
 
       <!-- Search Container -->
       <div class="searchContainer">
-        <div class="campoBusqueda">
-          <input type="search" name="buscar" class="inputBusqueda" placeholder="Busca GIFOS y más" id="search">
-          <button id="btnSearch"><img src="./assets/icons/icon-search.svg" alt=""></button>
-        </div>
+        <form class="campoBusqueda" id="searchForm">
+          <input type="text" name="buscar" class="inputBusqueda" placeholder="Busca GIFOS y más" id="search">
+          <button id="btnSearch"> <i class="fas fa-search searchIcon"></i></button>
+        </form>
       </div>
       <div id="results"></div>
+      <button type="submit" class="botonVerMas" id="btnSeeMore">Ver mas</button>
       <div class="trending_inicial">
         <H2>Trending: </H2><br>
         <p>Reactions, Entertainment, Sports, Stickers, Artists
