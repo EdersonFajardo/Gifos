@@ -1,5 +1,9 @@
 /*Home Page*/
-
+body{
+  &.dark{
+    background: $background-night;
+  }
+}
 /*footer*/
 body .pieDePagina {
   display: flex;
@@ -16,8 +20,18 @@ body .pieDePagina .redes .redesLogos {
   align-items: center;
   list-style: none;
 }
+body .pieDePagina h3{
+    color: black;
+    body.dark &{
+      color: $base-night;
+  }
+}
 body .pieDePagina p {
     color: black;
+    margin-top: 20px;
+    body.dark &{
+      color: $base-night;
+  }
 }
 body .pieDePagina .redes .redesLogos li {
   margin: 15px;

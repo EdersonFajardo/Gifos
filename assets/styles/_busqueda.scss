@@ -10,6 +10,9 @@
         text-align: center;
         width: 70%;
         color: $base-color;
+        body.dark &{
+            color: $base-night;
+        }
 
         span
         {
@@ -23,6 +26,7 @@
         
         img{
             width: 80%;
+            margin-top: 30px;
         }
     }
    
@@ -48,10 +52,13 @@
 .trending_inicial{
     text-align: center;
     color: $base-color;
-    width: 40%;
+    width: 50%;
     margin-top: 30px; 
     h2, p {
-        color: #572EE5;
+        color:#572EE5;
+        body.dark &{
+            color: $base-night;
+        }
     }
 }
 

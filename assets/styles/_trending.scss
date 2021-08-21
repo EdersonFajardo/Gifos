@@ -5,14 +5,26 @@
     align-items: center;
     align-content: center;
     background-color: #F3F5F8;
+    body.dark &{
+        background: $background-night-trend;
+    }
     h2{
         color: #572EE5;
         margin-top: 46px;
+        body.dark &{
+            color: $base-night;
+        }
     }
     p{
         color: black;
+        body.dark &{
+            color: $base-night;
+        }
     }
     .carrete_trending{
         margin-bottom: 80px;
+        body.dark &{
+            color: $base-night;
+        }
     }
 }

@@ -38,7 +38,9 @@
   }
   header nav .menu ul li:hover {
     background: #572EE5;
-
+    body.dark &{
+      color: $black-color;
+  }
   }
   header nav .menu ul li a {
     position: relative;
@@ -48,6 +50,9 @@
     line-height: 60px;
     display: block;
     text-align: center;
+    body.dark &{
+      color: $base-night;
+  }
   }
   header nav .menu ul li a:hover {
     color: white 80%;
@@ -83,6 +88,9 @@
     z-index: 1;
     transform-origin: 3px 0px;
     transition: transform 0.5s ease, opacity 0.55s ease;
+    body.dark &{
+      color: $background-night;
+  }
   }
   header nav .menu span:first-child {
     transform-origin: 0% 0%;
