@@ -42,7 +42,8 @@
       <!-- Search Container -->
       <div class="searchContainer">
         <form class="campoBusqueda" id="searchForm">
-          <input type="text" name="buscar" class="inputBusqueda" placeholder="Busca GIFOS y más" id="search">
+          <input type="text" name="buscar" list="suggestionList" class="inputBusqueda" placeholder="Busca GIFOS y más" id="search">
+          <datalist id="suggestionList"></datalist>
           <button id="btnSearch"> <i class="fas fa-search searchIcon"></i></button>
         </form>
       </div>

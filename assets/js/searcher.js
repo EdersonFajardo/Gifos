@@ -1,7 +1,8 @@
 let btnSearch = document.getElementById("btnSearch");
 let searchForm = document.getElementById("searchForm");
 let offset = 0;
-
+let suggestionList = document.getElementById("suggestionList");
+let searchInput = document.getElementById("search");
 //
 
 const searchIcon = (icon = "close") =>{
@@ -22,7 +23,7 @@ const searchIcon = (icon = "close") =>{
 
 const getPictures = async (viewMore = false, limit = 8) =>{
     let apiKey = "ivNs1oMCIrLAiKZYtW5uzbl93r7s0HoJ";
-    let stringSearch = document.getElementById("search").value.trim();
+    let stringSearch = searchInput.value.trim();
     stringSearch = stringSearch.replace(" ", "+")
     let url = `http://api.giphy.com/v1/gifs/search?q=${stringSearch}&api_key=${apiKey}&limit=${limit}&offset=${offset}`;
 
@@ -68,23 +69,35 @@ const autocompleteSearch = async () => {
     .then(response => response.json())
     .then(info => {
        //console.log("DATA = ", info)
+       let suggestOptions = "";
 
        info.data.forEach(element => {
-        console.log("NAME =", element.name);
+        //console.log("NAME =", element.name);
+        suggestOptions += `<option class = "suggestionElement" value="${element.name}">`;
        })
+       
+       
+
+       suggestionList.innerHTML = suggestOptions;
         
-        console.log(stringSearch)
+        //console.log(stringSearch)
     })
 }
 
-let searchInput = document.getElementById("search");
 
-
-searchInput.addEventListener("keyup", event => {
+searchInput.addEventListener("keyup", e => {
+    e.preventDefault()
     autocompleteSearch()
 })
 
-//
+searchInput.addEventListener("change", () => {
+    getPictures()
+})
+//Suggestion
+
+
+
+
 
 btnSearch.addEventListener("click", ev => {
     ev.preventDefault();

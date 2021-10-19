@@ -2,6 +2,13 @@ let gifCreate = document.getElementsByClassName("btn_gif")[0]
 
 let gifTxt = document.getElementsByClassName("gif_txt")[0]
 
+let urlBlobImg = "";
+
+let form = new FormData();
+
+let apiKey = "ivNs1oMCIrLAiKZYtW5uzbl93r7s0HoJ";
+
+
 let recorder = null
 console.log("gifCreate = " + gifCreate);
 
@@ -35,11 +42,16 @@ function stopRecord() {
         recorder.stopRecording(function() {
             let blob = recorder.getBlob();
             //invokeSaveAsDialog(blob);
-            console.log ("blob = " + blob)
+            urlBlobImg = blob;
+
+            form.append('gifFile', blob, 'myGif.gif')
+
+            /* console.log ("blob = " + blob) */
             let urlCreator = window.URL || window.webkitURL;
             let videoUrl = urlCreator.createObjectURL(blob);
             document.getElementById("myRecord").src = videoUrl;
             console.log ("video = " + videoUrl)
+
             
             let img = `<img src="${videoUrl}">`
             
@@ -88,6 +100,13 @@ const changeStatus = (status = "") => {
 
             stopRecord();
         }
+
+        else if(status.toLowerCase() == "upload") {
+            txtBtn = "SUBIENDO GIF"
+            //status = options[4]
+
+            postGif();
+        }
         
         
         gifCreate.setAttribute("status", status); 
@@ -121,4 +140,27 @@ gifCreate.onclick = () => {
 }
 
 //POST
-var 
+
+const postGif = async () => {
+
+    //let http = new XMLHttpRequest();
+    let url = "http://upload.giphy.com/v1/gifs?api_key="+apiKey;
+   
+
+    await fetch( url, {
+        method: "POST",
+        body: form
+    })
+
+    .then((response) => response.json())
+    .then((dataResponse) => {
+   
+       console.log(dataResponse)
+    })
+
+    .catch((error) => {
+        console.log(error);
+    });
+
+}
+
